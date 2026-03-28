@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+pnpm spellcheck && npx lint-staged && pnpm typecheck

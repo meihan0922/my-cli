@@ -8,7 +8,9 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint .",
         "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|apps)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md)\"",
-        "commit": "git-cz"
+        "typecheck": "tsc --noEmit",
+        "commit": "git-cz",
+        "prepare": "husky"
     },
     "repository": {
         "type": "git",
@@ -21,21 +23,32 @@
             "path": "cz-git"
         }
     },
+    "lint-staged": {
+        "*.{md,json}": [
+            "prettier --cache --write --no-error-on-unmatched-pattern"
+        ],
+        "*.{ts,tsx}": [
+            "eslint --fix",
+            "prettier --cache --parser=typescript --write"
+        ]
+    },
     "devDependencies": {
+        "@commitlint/cli": "20.5.0",
+        "@commitlint/config-conventional": "20.5.0",
         "@eslint/js": "10.0.1",
+        "@types/node": "25.5.0",
         "@typescript-eslint/eslint-plugin": "8.57.2",
+        "commitizen": "4.3.1",
+        "cspell": "9.7.0",
+        "cz-git": "1.12.0",
         "eslint": "10.1.0",
         "eslint-plugin-simple-import-sort": "12.1.1",
         "globals": "^17.4.0",
+        "husky": "9.1.7",
+        "lint-staged": "^16.4.0",
         "prettier": "3.8.1",
         "typescript": "6.0.2",
-        "typescript-eslint": "8.57.2",
-        "cspell": "9.7.0",
-        "husky": "9.1.7",
-        "@commitlint/cli": "20.5.0",
-        "@commitlint/config-conventional": "20.5.0",
-        "commitizen": "4.3.1",
-        "cz-git": "1.12.0"
+        "typescript-eslint": "8.57.2"
     },
     "license": "ISC",
     "bugs": {

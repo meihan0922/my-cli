@@ -1,15 +1,18 @@
 {
-  "name": "@my-cli/cli",
-  "version": "1.0.0",
-  "description": "my-cli cli",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "meihan0922",
-  "license": "ISC",
-  "dependencies": {
-    "commander": "^13.1.0"
-  }
+    "name": "@my-cli/cli",
+    "version": "1.0.0",
+    "description": "my-cli cli",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "bin": {
+        "mei_cli": "./bin/mei_cli"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "tsup --watch",
+        "build": "tsup"
+    },
+    "keywords": [],
+    "author": "meihan0922",
+    "license": "ISC"
 }
