@@ -1,0 +1,11 @@
+{
+    "name": "demo",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "mei_cli": "mei_cli"
+    },
+    "dependencies": {
+        "@my-cli/cli": "workspace:*"
+    }
+}
