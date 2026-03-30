@@ -1,13 +1,12 @@
-import { defineConfig } from 'eslint/config'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import globals from 'globals'
 import ts from 'typescript-eslint'
 
 import js from '@eslint/js'
 
-export default defineConfig(
+export default ts.config(
     {
-        ignores: ['**/dist/**', 'packages/cli/templates/**']
+        ignores: ['**/dist/**', 'packages/cli/templates/**/*']
     },
     js.configs.recommended,
     ts.configs.recommended,

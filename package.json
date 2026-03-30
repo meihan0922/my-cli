@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "eslint .",
+        "lint": "eslint --config eslint.config.js .",
         "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|apps)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md)\"",
         "typecheck": "tsc --noEmit",
         "commit": "git-cz",
@@ -30,7 +30,7 @@
             "prettier --cache --write --no-error-on-unmatched-pattern"
         ],
         "*.{ts,tsx}": [
-            "eslint --fix",
+            "eslint --config eslint.config.js --fix",
             "prettier --cache --parser=typescript --write"
         ]
     },
