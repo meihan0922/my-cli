@@ -5,12 +5,13 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "bin": {
-        "mei_cli": "./bin/mei_cli"
+        "mei_cli": "bin/mei_cli"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "tsup --watch",
-        "build": "tsup"
+        "build": "tsup",
+        "prepare": "npm run build"
     },
     "keywords": [],
     "author": "meihan0922",

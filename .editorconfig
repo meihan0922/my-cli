@@ -1,15 +1,13 @@
-# 頂層設定，停止向上搜尋
+# http://editorconfig.org
 root = true
 
-# 適用於所有檔案
 [*]
-indent_style = space        # 縮排風格：空格(space)或製表符(tab)
-indent_size = 2             # 縮排大小
-end_of_line = lf            # 換行符號：lf, crlf, cr
-charset = utf-8             # 編碼：utf-8
-trim_trailing_whitespace = true  # 去除行尾空白
-insert_final_newline = true      # 檔案末尾保留一個換行
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
 
-# 適用於特定檔案類型
 [*.md]
 trim_trailing_whitespace = false

@@ -10,7 +10,9 @@
         "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|apps)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md)\"",
         "typecheck": "tsc --noEmit",
         "commit": "git-cz",
-        "prepare": "husky"
+        "prepare": "husky",
+        "dev": "turbo run dev",
+        "build": "turbo run build"
     },
     "repository": {
         "type": "git",
@@ -48,7 +50,9 @@
         "lint-staged": "^16.4.0",
         "prettier": "3.8.1",
         "typescript": "6.0.2",
-        "typescript-eslint": "8.57.2"
+        "typescript-eslint": "8.57.2",
+        "turbo": "2.8.21",
+        "ora": "9.3.0"
     },
     "license": "ISC",
     "bugs": {
