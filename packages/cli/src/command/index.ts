@@ -1,6 +1,6 @@
 import { program } from 'commander'
 
-import pkg from '../package.json'
+import pkg from '../../package.json'
 
 import { versionCommand } from './base/version'
 import { registerCommand } from './registerCommand'

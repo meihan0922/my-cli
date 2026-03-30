@@ -1,6 +1,6 @@
 import { program } from 'commander'
 
-import '../command'
+import './command'
 
 export const runCli = () => {
     program.parse(process.argv)
